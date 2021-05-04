@@ -59,10 +59,8 @@ public class ImageAugmentor implements PlugIn {
 		gui.setForeground(fgc);
 		gui.addImage(icon);
 		gui.addToSameRow();
-//		gui.addMessage("_________Image Augmentor_________", font0, Color.darkGray);
 		gui.addMessage("Augment images in X folds for large scale deep learning ", font0, Color.white);
 
-//		gui.addMessage(" ", font1, Color.darkGray);
 		gui.addDirectoryField("Select Input Image directory:", "F:\\imageJ\\project\\Batch_Input_Images");
 		gui.addDirectoryField("Select Output Annotation directory:", "F:\\imageJ\\project\\Batch_Output_Images");
 		gui.addNumericField("Generate Images:",20);
@@ -73,7 +71,6 @@ public class ImageAugmentor implements PlugIn {
 		gui.addToSameRow();
 		gui.addMessage("Overall Probability (recommended:80%)", font2, fgc);
 		
-//		gui.addMessage(" ", font1, Color.darkGray);
 		gui.addCheckbox("Random Flip (Horizontal/Vertical)", true); 
 		gui.addToSameRow();
 		gui.addSlider("Probability",0,100,50);
@@ -106,10 +103,6 @@ public class ImageAugmentor implements PlugIn {
 		gui.addToSameRow();
 		gui.addSlider("Gamma value",1,10,2);
 		
-//		gui.addCheckbox("Random crop", false);
-//		gui.addToSameRow();
-//		gui.addSlider("Probability",1,100,10);
-		
 		gui.addCheckbox("Contrast", true);
 		gui.addToSameRow();
 		gui.addSlider("Probability",1,100,50);
@@ -136,23 +129,10 @@ public class ImageAugmentor implements PlugIn {
 		
 		String[] imageOutFormat = {"PNG", "JPG", "JPEG", "GIF"};
 		gui.addChoice("Image Out Format",imageOutFormat,"PNG"); 
-//		gui.addToSameRow();
 		gui.addImage(icon2);
 		gui.addToSameRow();
 		gui.addMessage("__-Jithin Mathew_", font0, Color.white);
 		
-//		String[] outputFormats = {"YOLO", "Pascal Voc"};
-//		gui.addRadioButtonGroup("Format", outputFormats, 5, 1, "YOLO");
-//		gui.addImage(icon);
-
-//		Panel panel = new Panel();
-//		Button b = new Button("...");
-//		panel.add( b);
-//		gui.addPanel( panel );
-		
-//		FileGroup fg = new FileGroup("files");
-// 		FileGroupDialog fgd = new FileGroupDialog(fg, false);
-//  		gui.addPanel(fgd);
 		
 		gui.showDialog();
 		if (gui.wasCanceled()) return;
@@ -183,10 +163,7 @@ public class ImageAugmentor implements PlugIn {
 		Boolean gamm = gui.getNextBoolean();
 		double gamm_per = gui.getNextNumber();
 		double gamm_factor = gui.getNextNumber();
-		
-//		Boolean crop = gui.getNextBoolean();
-//		double crop_per = gui.getNextNumber();
-		
+				
 		Boolean contra = gui.getNextBoolean();
 		double contra_percent = gui.getNextNumber();
 		double contra_scale = gui.getNextNumber();
@@ -204,7 +181,6 @@ public class ImageAugmentor implements PlugIn {
 		double gdisto_scale = gui.getNextNumber();
 		
 		String Oformat = gui.getNextChoice();
-//		String Oformat = gui.getNextRadioButton();
 
 		IJ.log("Image directory : "+FolderPath1);
 		IJ.log("Output directory : "+FolderPath2);
@@ -237,7 +213,6 @@ public class ImageAugmentor implements PlugIn {
 		IJ.log("Gaussian Blur Probability : "+gdisto_percent);
 		IJ.log("Gaussian Blur Factor : "+gdisto_scale);
 		IJ.log("Output Format : "+Oformat);
-//		IJ.log(""+Oformat);
 		
 		String[] list = new File(FolderPath1).list(); // this section of the code reads the files in the folder and save it to a list
 		for (int i=0; i<list.length; i++) {			  // Iterate through list and print the filenames
@@ -316,23 +291,9 @@ public class ImageAugmentor implements PlugIn {
 				}	
 			}
 				
-//		openFile();
-		
-
-		/**
-		 * <h4> Optional</h4>
-		 * @param Boolean condition : Set to True if output to be displayed 
-		 * Setting display image to can add memory inetensive and time consuming operation 
-		 * It is recommened to set the parameter to false for faster operations
-		 */
 	}
 
 			void displayImage(String method, String image, String  FolderPath2, double prob_ , int count, double scale_minmax, double rotation_ang, double noise_factor, double gamm_factor, double contra_scale, double bri_scale, double gdisto_scale, String OF){
-				/**
-				* By default Clown.jpg image is chosen
-				* @param IJ Image: Chagne the image name from the list of imageJ samples to work on it
-				* Comment of methods to prevent it from runnig
-				*/
 				
 				IJ.open(image);				
 				ImagePlus imp = IJ.getImage();
@@ -381,8 +342,6 @@ public class ImageAugmentor implements PlugIn {
 					randomBrightness(imp, bri_scale);
 					}
 
-				// contrast 
-				//brightness
 
 				if (method == "SMOOTH" & prob_ >= main_prob){
 					randomSmooth(ip);	
@@ -397,32 +356,11 @@ public class ImageAugmentor implements PlugIn {
 					gBlur(ip,gdisto_scale);	
 					}				
 
-//				randomLogarithmic(ip);
-//				addSalt(ip);
-//				imp.updateAndDraw();
 				IJ.saveAs(OF, FolderPath2 +"\\"+ count);
-//				imp.changes = true;
 				imp.close();
 			
 			}
 
-//				public void openFile() {
-//			
-//					String curDir = OpenDialog.getDefaultDirectory();
-//					IJ.log("\nCurrent directory = " + curDir);
-//					String lastDir = OpenDialog.getLastDirectory();
-//					IJ.log("Last directory = " + curDir);
-//			
-//					String currentDirectory = (OpenDialog.getLastDirectory() == null) ? 
-//						 OpenDialog.getDefaultDirectory() : OpenDialog.getLastDirectory();
-//			
-//					IJ.log("Now the current directory = " + currentDirectory);		 
-//					String fname = "gems_rainbow.jpg";
-//					IJ.log("File with path = " + currentDirectory+fname);
-//			
-//					ImagePlus img1 = IJ.openImage(currentDirectory+fname);
-//					img1.show();
-//				}
 
 			void radomFlip(ImageProcessor ipf){
 					ipf.flipHorizontal();
@@ -436,7 +374,6 @@ public class ImageAugmentor implements PlugIn {
 			void randomRotate(ImageProcessor ipr, double rotation_ang){
 				java.util.Random random = new java.util.Random();
 				double val1 = random.nextInt((int)rotation_ang - 0 + 1) + 0;
-//				IJ.log("value"+val1);
 				ipr.rotate(val1);
 				}
 
@@ -508,26 +445,6 @@ public class ImageAugmentor implements PlugIn {
 
 			
 
-//			void applyGaussian(ImageProcessor ipfg, double sigma){
-//				/**
-//				 * This function applies gaussian blur to image	for augmenting iamges with blurness 
-//				 * @param int sigma: Sigma value according to which Gaussian blur will be applied 
-//				 * Experimental method
-//				 */
-//
-//				GaussianBlur gb = new GaussianBlur();
-//				double radius = sigma;
-//				gb.blurGaussian(ipfg, radius, radius, 0.02);
-//				
-//				ImagePlus imxy = new ImagePlus("Sobel filter", ipfg);
-//				imxy.updateAndDraw();
-//						
-//				}
-			
-//			void randomLogarithmic(ImageProcessor ipf){
-//				ipf.log();
-//				}
-//			
 			void addSalt(ImageProcessor ipf){
 
 				/**
