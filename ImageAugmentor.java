@@ -50,8 +50,8 @@ public class ImageAugmentor implements PlugIn {
 		Font font1 = new Font("Arial", Font.BOLD, 14);	
 		Font font2 = new Font("Arial", Font.BOLD, 12);	
 
-		ImageIcon icon = new ImageIcon("F:\\imageJ\\project\\augmentor_.png");
-		ImageIcon icon2 = new ImageIcon("F:\\imageJ\\project\\logo_50.png");
+		ImageIcon icon = new ImageIcon("Path to logo .png");
+		ImageIcon icon2 = new ImageIcon("Path to logo .png");
 		
 		GenericDialogPlus gui = new GenericDialogPlus("Image Augmenter");
 
@@ -61,8 +61,8 @@ public class ImageAugmentor implements PlugIn {
 		gui.addToSameRow();
 		gui.addMessage("Augment images in X folds for large scale deep learning ", font0, Color.white);
 
-		gui.addDirectoryField("Select Input Image directory:", "F:\\imageJ\\project\\Batch_Input_Images");
-		gui.addDirectoryField("Select Output Annotation directory:", "F:\\imageJ\\project\\Batch_Output_Images");
+		gui.addDirectoryField("Select Input Image directory:", "Path to source image directory /Batch_Input_Images");
+		gui.addDirectoryField("Select Save Output directory:", "Path to output image directory / Batch_Output_Images");
 		gui.addNumericField("Generate Images:",20);
 		gui.addMessage("Keep the probability high to augment most of the images", font2, Color.white);
 		gui.addMessage("By default the parameters are set for best performance", font2, Color.white);
