@@ -41,6 +41,7 @@ javac 1.8.0_392
 
 ## Using ImageJAugmentor
 
+![final_imageJ](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/imageJ.png)
 <br>
 
 ![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/GDB_UI.png)
