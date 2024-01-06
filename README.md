@@ -12,7 +12,7 @@ sudo apt update
 sudo apt install openjdk-8-jdk
 ```
 If several versions of Java are installed in your system, you can switch between the versions using the command 
-<span style="color: #ffc82e;"> ### !!! IF SEVERAL VERSIONS OF JAVA ARE INSTALLED, IT IS VERY IMPORTANT TO SET THE JAVA SDK AND JAVAC TO THE SAME VERSIONS, IF NOT THE CODE WILL GENERATE ERROR  </span>
+### !!! IF SEVERAL VERSIONS OF JAVA ARE INSTALLED, IT IS VERY IMPORTANT TO SET THE JAVA SDK AND JAVAC TO THE SAME VERSIONS, IF NOT THE CODE WILL GENERATE ERROR {: style="color: #ffc82e;"}
 ```bash
 sudo update-alternatives --config java
 sudo update-alternatives --config javac
