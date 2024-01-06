@@ -3,6 +3,8 @@ An Imagej Plugin for Large Scale Image Data Augmentation
 
 * add path to lines 63, 54, 64, 65 in ImageAugmentor.java file
 
+![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/Mac_ImageJ_Augmentor.png)
+
 ## Installation (Linux)
 
 ### Installing Java 8
@@ -51,7 +53,7 @@ javac 1.8.0_392
 ![final_imageJ](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/imageJ.png)
 <br>
 
-![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/Mac_ImageJ_Augmentor.png)
+
 
 
 <br>
