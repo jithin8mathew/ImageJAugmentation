@@ -47,6 +47,33 @@ javac 1.8.0_392
 * Once Fiji is downloaded, CONTROL + CLICK, the select OPEN to install the application.
 * Once ImageJ window appears, select open> ImageAugmentor.java
 
+## Augmentation methods used for this project 
+
+### Image Augmentation Methods
+1. **Flipping:**
+   - Horizontal Flip
+   - Vertical Flip
+2. **Rotation:**
+   - Random Rotation
+3. **Scaling:**
+   - Random Scaling
+4. **Translation:**
+   - Random Translation
+5. **Soothing:**
+   - Random Smoothing
+6. **Sharpening:**
+   - Random Sharpening
+7. **Color Jittering:**
+   - Random changes to brightness, contrast
+8. **Noise:**
+   - Add random noise to the image
+9. **Blur:**
+   - Gaussian Blur
+10. **Contrast Enhancement:**
+    - Adjusting contrast
+11. **Brightness Adjustment:**
+    - Adjusting brightness
+
 ## Using ImageJAugmentor
 
 ![final_imageJ](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/imageJ.png)
