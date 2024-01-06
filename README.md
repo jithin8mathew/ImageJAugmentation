@@ -1,9 +1,7 @@
-# ImageJAugmentation
-An ImageJ Plugin for Large Scale Image Data Augmentation 
+# ImageJ Augmentation
+## <p align="center">Image Augmentor: An Image Data Augmentation Plugin for Deep Learning and Computer Vision using ImageJ</p>
 
 The provided Java code implements an ImageJ plugin called "ImageAugmentor" designed for image augmentation, a technique commonly used in deep learning for data diversification. The plugin, presented as a generic dialog, enables users to select input and output directories, set augmentation parameters such as the number of generated images, and apply various image transformation methods. These methods include random flipping, scaling, rotation, noise addition, exponential transformation, gamma correction, contrast adjustment, brightness modification, smoothing, sharpening, and Gaussian distortion. The plugin leverages ImageJ's functionalities to process images based on user-defined augmentation probabilities. The resulting augmented images are saved in the chosen output format (e.g., PNG, JPG). The code is well-commented and structured, making it suitable for integration into image analysis workflows and potentially serving as a useful tool for researchers working with image datasets in the field of machine learning and computer vision.
-
-* add path to lines 63, 54, 64, 65 in ImageAugmentor.java file
 
 ![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/Mac_ImageJ_Augmentor.png)
 
