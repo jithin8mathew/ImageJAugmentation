@@ -39,12 +39,19 @@ javac 1.8.0_392
 * Once ImageJ window appears, select open> ImageAugmentor.java
 * CTRL + R will compile and run the script if the right Java version is chosen
 
+## Mac installation (older silicon tech 64x AMD)
+* Download Java 8 from [Oracle Java SE 8 Archive](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
+* Downlaod appropriate DMG file and dobule click on it to install.
+* Downlaod Fiji from [here](https://imagej.net/software/fiji/)
+* Once Fiji is downloaded, CONTROL + CLICK, the select OPEN to install the application.
+* Once ImageJ window appears, select open> ImageAugmentor.java
+
 ## Using ImageJAugmentor
 
 ![final_imageJ](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/imageJ.png)
 <br>
 
-![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/GDB_UI.png)
+![final_screenshot](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/Mac_ImageJ_Augmentor.png)
 
 
 <br>
