@@ -35,7 +35,7 @@ javac 1.8.0_392
 * Downlaod Fiji from [here](https://imagej.net/software/fiji/)
 * Extract the files to the desired folder
 * Navigate to fiji-linux64/Fiji.app folder, right-click on ImageJ-linux64, on the permissions tab, make sure Allow executing file as a program option checkbox is selected. 
-* Download ImageJAugmentation using the command ```python git clone https://github.com/jithin8mathew/ImageJAugmentation.git```, assuming you have git installed.
+* Download ImageJAugmentation using the command ```git clone https://github.com/jithin8mathew/ImageJAugmentation.git```, assuming you have git installed.
 * Once ImageJ window appears, select open> ImageAugmentor.java
 * CTRL + R will compile and run the script if the right Java version is chosen
 
