@@ -77,9 +77,11 @@ javac 1.8.0_392
 ## Using ImageJAugmentor
 
 ![final_imageJ](https://github.com/jithin8mathew/ImageJAugmentation/blob/main/imageJ.png)
-<br>
+
+## Datasets used:
+For object detection benchmark, we used [Global Wheat Head Detection Dataset](https://www.global-wheat.com/gwhd.html), which can be accessed for your own testing. The dataset needs to pre-processed with the following [code](https://www.google.com) to work with YOLOv8 hosted by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics). 
+
+## Training the model 
+[YOLOv8l]([https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt)https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt) from [Ultralytics](https://github.com/ultralytics/ultralytics) was used for the object detect training experimentation. 
 
 
-
-
-<br>
