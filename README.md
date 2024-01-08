@@ -86,6 +86,12 @@ Dataset were split into YOLO format using the following [script](https://github.
 ## Training the model 
 [YOLOv8l]([https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt)https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt) from [Ultralytics](https://github.com/ultralytics/ultralytics) was used for the object detect training experimentation. 
 
+For each Deep Learning methods that we test in the study (classification, detection, and segmentation), we perform training and validation with 2 variants of the same dataset each. 
+   * AUGMENTED DATASET
+   * ORIGINAL DATASET
+
+### OBJECT DETECTION
+
 YOLOv8 PEFORMS AUGMENTATION BY DEFAULT AS SEEN [HERE](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml). AUGMENTATION PARAMETERS IN THE DEFAULT CONFIGURATION NEEDS TO BE SET TO ZERO TO OVERRIDE THE DEFAULT HYPERPARAMETERS. 
 
 ```python3
