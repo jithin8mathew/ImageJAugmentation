@@ -81,7 +81,39 @@ javac 1.8.0_392
 ## Datasets used:
 For object detection benchmark, we used [Global Wheat Head Detection Dataset](https://www.global-wheat.com/gwhd.html), which can be accessed for your own testing. The dataset needs to pre-processed with the following [code](https://www.google.com) to work with YOLOv8 hosted by [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics). 
 
+Dataset were split into YOLO format using the following [script](https://github.com/jithin8mathew/Python_Scripts_for_Machine_Learning_pre-processing/blob/main/create_YOLO_dataset.py) with 90:10 ratio.
+
 ## Training the model 
 [YOLOv8l]([https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt)https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8l.pt) from [Ultralytics](https://github.com/ultralytics/ultralytics) was used for the object detect training experimentation. 
 
+YOLOv8 PEFORMS AUGMENTATION BY DEFAULT AS SEEN [HERE](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml). AUGMENTATION PARAMETERS IN THE DEFAULT CONFIGURATION NEEDS TO BE SET TO ZERO TO OVERRIDE THE DEFAULT HYPERPARAMETERS. 
 
+```python3
+from ultralytics import YOLO
+
+model = YOLO('yolov8l.pt')
+results = model.train(data='/home/pauloflores/Documents/imageJ_project/dataset/YOLOv8_data_format/data.yaml', 
+                      epochs=100, 
+                      imgsz=1024, 
+                      save=True, 
+                      device=[0,1], 
+                      project="ImgeJ_Augmentor",
+                      name="Non_augmented_OD",
+
+                      # DISABLING DATA AUGMENTATION PARAMETERS
+                      hsv_h = 0.0,
+                      hsv_s = 0.0,
+                      hsv_v = 0.0,
+                      degrees = 0.0,
+                      translate = 0.0,
+                      scale = 0.0,
+                      shear = 0.0,
+                      perspective = 0.0,
+                      flipud = 0.0,
+                      fliplr = 0.0,
+                      mosaic = 0.0,
+                      mixup = 0.0,
+                      copy_paste = 0.0,
+                     )
+
+```
