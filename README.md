@@ -94,6 +94,10 @@ For each Deep Learning methods that we test in the study (classification, detect
 
 YOLOv8 PEFORMS AUGMENTATION BY DEFAULT AS SEEN [HERE](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml). AUGMENTATION PARAMETERS IN THE DEFAULT CONFIGURATION NEEDS TO BE SET TO ZERO TO OVERRIDE THE DEFAULT HYPERPARAMETERS. 
 
+**ORIGINAL DATASET**
+ - Training: 5877 images
+ - Validation: 631 images
+
 ```python3
 from ultralytics import YOLO
 
@@ -101,8 +105,9 @@ model = YOLO('yolov8l.pt')
 results = model.train(data='/home/pauloflores/Documents/imageJ_project/dataset/YOLOv8_data_format/data.yaml', 
                       epochs=100, 
                       imgsz=1024, 
-                      save=True, 
-                      device=[0,1], 
+                      save=True,
+                      batch = 8,
+                      # device=[0,1], 
                       project="ImgeJ_Augmentor",
                       name="Non_augmented_OD",
 
