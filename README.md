@@ -131,3 +131,21 @@ results = model.train(data='/home/pauloflores/Documents/imageJ_project/dataset/Y
                      )
 
 ```
+
+### INSTANCE SEGMENTATION
+**ORIGINAL DATASET**
+ - Training: 500 images
+ - Validation: 50 images
+**AUGMENTED DATASET**
+- Training: 400(original) + 100(augmented)
+ - Validation: 50 images
+
+### IMAGE CLASSIFICATION
+**ORIGINAL DATASET**
+ - Training: ABC images
+ - Validation: DEF images
+**AUGMENTED DATASET**
+- Training: ABC(original) + HIJ(augmented)
+ - Validation: DEF images
+
+
