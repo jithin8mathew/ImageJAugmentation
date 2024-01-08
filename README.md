@@ -97,7 +97,10 @@ YOLOv8 PEFORMS AUGMENTATION BY DEFAULT AS SEEN [HERE](https://github.com/ultraly
 **ORIGINAL DATASET**
  - Training: 5877 images
  - Validation: 631 images
-
+**AUGMENTED DATASET**
+- Training: 4702(original) + 1175(augmented)
+ - Validation: 631 images
+   
 ```python3
 from ultralytics import YOLO
 
