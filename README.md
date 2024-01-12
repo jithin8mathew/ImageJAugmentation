@@ -141,6 +141,9 @@ results = model.train(data='/home/pauloflores/Documents/imageJ_project/dataset/Y
  - Validation: 50 images
 
 ### IMAGE CLASSIFICATION
+Fusarium Blight Head dataset was used to peform image classification. 
+Augmentation was performed with the following ratio [0.5,0.4,0.3,0.2,0.1] against original dataset, resulting in {0.5: 564, 0.4: 451, 0.3: 338, 0.2: 225, 0.1: 112} images accross the entire dataset. 
+
 **ORIGINAL DATASET**
  - Training: ABC images
  - Validation: DEF images
