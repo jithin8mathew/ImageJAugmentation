@@ -148,6 +148,10 @@ Augmentation was performed with the following ratio [0.5,0.4,0.3,0.2,0.1] agains
  - Training: ABC images
  - Validation: DEF images
 **AUGMENTED DATASET**
+
+## ISSUES TO FIX
+* Currently if there is a folder inside the read_directory, it reads the folder and resutls in failure to generate image
+* Sometimes images are overwirtten, resulting in lesser no of augemted images than the user anticipates. 
 - Training: ABC(original) + HIJ(augmented)
  - Validation: DEF images
 
