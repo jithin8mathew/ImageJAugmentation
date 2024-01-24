@@ -1,0 +1,7 @@
+train: /home/jithin/Documents/2024/ImageJ_project/data/object_detection/YOLOv8_original_dataset_V2/images/train
+test: /home/jithin/Documents/2024/ImageJ_project/data/object_detection/YOLOv8_original_dataset_V2/images/val
+val: /home/jithin/Documents/2024/ImageJ_project/data/object_detection/YOLOv8_original_dataset_V2/images/test
+
+# Classes
+names:
+  0: wheat_head
