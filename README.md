@@ -140,6 +140,9 @@ Augmentation was performed with the following ratio [0.5,0.4,0.3,0.2,0.1] agains
  - Training: 900 
  - Validation: 225
 **AUGMENTED DATASET**
+ - Total Images: 1872
+ - Training: 1498 
+ - Validation: 374
 
 ## ISSUES TO FIX
 * Currently if there is a folder inside the read_directory, it reads the folder and resutls in failure to generate image
