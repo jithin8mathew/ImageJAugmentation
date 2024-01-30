@@ -131,22 +131,14 @@ results = model.train(data='/home/pauloflores/Documents/imageJ_project/dataset/Y
                      )
 
 ```
-
-### INSTANCE SEGMENTATION
-**ORIGINAL DATASET**
- - Training: 500 images
- - Validation: 50 images
-**AUGMENTED DATASET**
-- Training: 400(original) + 100(augmented)
- - Validation: 50 images
-
 ### IMAGE CLASSIFICATION
 Fusarium Blight Head dataset was used to peform image classification. 
 Augmentation was performed with the following ratio [0.5,0.4,0.3,0.2,0.1] against original dataset, resulting in {0.5: 564, 0.4: 451, 0.3: 338, 0.2: 225, 0.1: 112} images accross the entire dataset. 
 
 **ORIGINAL DATASET**
- - Training: ABC images
- - Validation: DEF images
+ - Total Images: 1126
+ - Training: 900 
+ - Validation: 225
 **AUGMENTED DATASET**
 
 ## ISSUES TO FIX
